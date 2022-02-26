@@ -8,6 +8,10 @@ ul {
      list-style: none;
 }
 
+a {
+     display: inline-block;
+}
+
 /* Font Families */
 h1 {
      font-family: 'Cookie', cursive;
@@ -15,7 +19,7 @@ h1 {
      cursor: default;
 }
 
-h2, h3, li {
+h2, h3, li, a {
      font-family: 'Viga', sans-serif;
      line-height: 1.5;
 }
@@ -94,6 +98,8 @@ li {
      flex-direction: column;
      align-items: center;
      justify-content: space-evenly;
+     border-top: 2px solid white;
+     border-bottom: 2px solid white;
 }
 
 .header-second h1, h3 {
@@ -141,11 +147,73 @@ li {
      }
 
      /* Second Part of Header */
-
      .header-second p {
           color: white;
           text-align: center;
           font-size: 1.5rem;
           padding: 0 20%;
      }
+}
+
+
+/* Porjects Section */
+
+.projects {
+     background-color: #ff5757;
+     width: 100vw;
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     flex-flow: column wrap;
+     justify-content: space-evenly;
+}
+
+.projects h1 {
+     text-align: center;
+}
+
+.images{
+     display: flex;
+     flex-flow: row wrap;
+     width: 100vw;
+     gap: 1rem;
+     padding: 0 10px;
+}
+
+a {
+     flex-shrink: 1;
+     flex-grow: 1;
+     flex-basis: 40%;
+}
+
+img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     border-radius: 10px;
+     box-shadow: 5px 5px 15px black;
+     border: 1px solid white;
+}
+
+@media (min-width: 500px) {
+     a {
+          flex-basis: 20%;
+     }
+}
+
+.github {
+     flex-grow: 0;
+     flex-basis: 0;
+     text-decoration: none;
+     color: black;
+     font-size: 2.5rem;
+     padding: 1rem 1.5rem;
+     border: 1px solid black;
+     box-shadow: 5px 5px black;
+     transition: 0.2s ease;
+}
+
+.github:hover {
+     box-shadow: 0 0;
+     transform: translateX(5px) translateY(5px);
 }
