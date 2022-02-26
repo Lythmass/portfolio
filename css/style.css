@@ -39,18 +39,18 @@ p {
 }
 
 i {
-     padding: 1.75rem; 0;
+     padding: 1.75rem;
 }
 
 /* Navigation Bar */
 
 nav {
+     display: flex;
      position: fixed;
      z-index: 99;
      background-color: hsl(0, 100%, 0%, 0.5);
-     width: 100%;
+     width: 100vw;
      height: 100vh;
-     display: flex;
      justify-content: center;
      align-items: center;
      color: white;
@@ -68,7 +68,7 @@ li {
 .menu {
      position: fixed;
      top: 0;
-     right: 0;
+     right: -10px;
      color: white;
      z-index: 100;
      cursor: pointer;
@@ -87,8 +87,8 @@ li {
 
 /* Second Part of Header */
 .header-second {
-     height: 50vh;
-     width: 100vw;
+     min-height: 50vh;
+     min-width: 100vw;
      background-color: black;
      display: flex;
      flex-direction: column;
@@ -98,10 +98,54 @@ li {
 
 .header-second h1, h3 {
      color: #ff5757;
+     text-align: center;
 }
 
 .header-second p {
      color: white;
      text-align: center;
      padding: 0 5%;
+}
+
+/* Header Styles for Desktop Size */
+@media (min-width: 700px) {
+     .menu {
+          display: none;
+     }
+     nav {
+          position: absolute;
+          background-color: hsl(0, 100%, 0%, 0);
+          transform: translateX(0);
+          align-items: flex-start;
+          top: -2rem;
+     }
+     li {
+          font-size: 1.5rem;
+          transition: 0.2s ease;
+     }
+     li:hover {
+          transform: scale(1.125);
+     }
+     h1 {
+          font-size: 7rem;
+     }
+     ul {
+          display: flex;
+          flex-direction: row;
+          gap: 3rem;
+          color: black;
+     }
+
+     .header-first > div {
+          margin-top: 3.5rem;
+     }
+
+     /* Second Part of Header */
+
+     .header-second p {
+          color: white;
+          text-align: center;
+          font-size: 1.5rem;
+          padding: 0 20%;
+     }
 }
