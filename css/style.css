@@ -68,6 +68,10 @@ li {
      font-size: 2.5rem;
      cursor: pointer;
 }
+nav ul li a {
+     text-decoration: none;
+     color: white;
+}
 
 .menu {
      position: fixed;
@@ -131,7 +135,6 @@ li {
      }
      li:hover {
           transform: scale(1.125);
-          color: white;
      }
      h1 {
           font-size: 7rem;
@@ -153,6 +156,14 @@ li {
           text-align: center;
           font-size: 1.5rem;
           padding: 0 20%;
+     }
+     nav ul li a {
+          text-decoration: none;
+          color: black;
+     }
+     nav ul li a:hover {
+          text-decoration: none;
+          color: white;
      }
 }
 
@@ -188,14 +199,14 @@ li {
      box-shadow: 7px 7px 5px black;
 }
 
-a:not(.github) {
+.images a:not(.github) {
      width: 100%;
      text-decoration: none;
      color: black;
      font-size: 1.5rem;
      transition: 0.2s ease;
 }
-a:not(.github):hover {
+.images a:not(.github):hover {
      transform: scale(1.125);
      color: white;
 }
@@ -203,6 +214,7 @@ a:not(.github):hover {
 .images div {
      display: inline-block;
      width: 100%;
+     padding: 1rem 0;
 }
 
 @media (min-width: 700px) {
