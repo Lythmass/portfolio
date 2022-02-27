@@ -279,7 +279,7 @@ a:not(.github):hover {
 
 /* Contact Section */
 .contact {
-     width: 100vw;
+     width: 100%;
      background-color: #ff5757;
      display: flex;
      flex-direction: column;
@@ -299,13 +299,15 @@ form {
      margin: 2rem 0;
 }
 
-textarea, input {
+textarea {
      background-color: #ff5757;
      border: 3px solid black;
      font-size: 1rem;
      box-shadow: 0 0;
      font-weight: 600;
      transition: 0.2s ease;
+     width: 15rem;
+     height: 5rem;
 }
 
 textarea:focus {
@@ -329,4 +331,11 @@ button {
 button:hover {
      box-shadow: 0 0;
      transform: translateX(5px) translateY(5px);
+}
+
+@media (min-width: 700px) {
+     textarea {
+          width: 30rem;
+          height: 10rem;
+     }
 }
